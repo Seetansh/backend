@@ -7,13 +7,13 @@ const app = express()
 app.use(express.json())
 // Decrypt the data 
 app.use(cors({
-    origin: 'http://localhost:5173',
+    origin: 'https://frontend-roan-nine-54.vercel.app',
 }))
 // allow requests from 5173 port
 
 // router level middleware4
 const valid = (req, res, next) => {
-    if (req.body[0].name.length<3) {
+    if (req.body[0].name.length < 3) {
         res.send(
             "sorry"
         )
